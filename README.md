@@ -4,6 +4,16 @@ This Python script displays the current playing album art from Spotify on a 4:3 
 
 rename the script you want to use to SpotifyAlbumArt.py
 
+there is a script which you can use to make install easier just;  
+vi install.sh
+i
+copy script over from https://github.com/Brownster/SpotifyAlbumArt.py/blob/main/install.sh
+:wq
+chmod +x install.sh
+./install.sh
+
+HDMI Spotify Album Art
+
 Prerequisites
 
     Python 3.6 or later
@@ -12,7 +22,7 @@ Prerequisites
     
 Dependencies
 
-The script uses several Python libraries. You can install them via pip:
+The script that uses HDMI uses several Python libraries. You can install them via pip:
 
 bash
 
@@ -52,8 +62,8 @@ Spotify Album Art Display on RGB LED Matrix
 This project displays the current Spotify album art on an RGB LED matrix using a Raspberry Pi. It utilizes the Spotify API to fetch the current playing song's album art and displays it on the LED matrix.
 Requirements
 
-    Raspberry Pi (tested on Model 3B+ and 4)
-    RGB LED Matrix
+    Raspberry Pi
+    RGB LED Matrix - https://thepihut.com/products/rgb-full-colour-led-matrix-panel-2-5mm-pitch-64x64-pixels
     Internet connection to access the Spotify API
 
 Dependencies
