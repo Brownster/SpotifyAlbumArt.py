@@ -28,13 +28,13 @@ Usage
 
 bash
 
-git clone <repository-url>
+git clone https://github.com/Brownster/SpotifyAlbumArt.py.git
 
     Navigate to the repository folder:
 
 bash
 
-cd <repository-folder>
+cd SpotifyAlbumArt
 
     Replace the placeholders for client_id, client_secret, and redirect_url in the script with your actual Spotify app credentials.
 
@@ -42,6 +42,4 @@ cd <repository-folder>
 
 bash
 
-python now_playing.py
-
-Replace now_playing.py with the actual filename if it's different.
+python3 SpotifyAlbumArt.py
