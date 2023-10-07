@@ -45,24 +45,37 @@ bash
 python3 SpotifyAlbumArt.py
 
 
+Spotify Album Art Display on RGB LED Matrix
 
-LED - Spotify Album Art
+This project displays the current Spotify album art on an RGB LED matrix using a Raspberry Pi. It utilizes the Spotify API to fetch the current playing song's album art and displays it on the LED matrix.
+Requirements
 
-You need to install several libraries to make this work, including spotipy for interacting with the Spotify API, requests for making HTTP requests to download the album art, PIL (Pillow) for working with images, and the RGB matrix library for controlling the LED matrix. Here are the steps:
-1. Install spotipy, requests, and Pillow using pip
+    Raspberry Pi (tested on Model 3B+ and 4)
+    RGB LED Matrix
+    Internet connection to access the Spotify API
 
-If you haven't installed these libraries yet, you can do so via pip. Open your terminal and type:
+Dependencies
+
+    spotipy
+    requests
+    Pillow (PIL Fork)
+    rpi-rgb-led-matrix
+
+Installation
+1. Clone the Repository
 
 bash
 
-pip install spotipy requests pillow
+git clone [https://github.com/yourusername/https://github.com/Brownster/SpotifyAlbumArt.py/spotify-album-art-display.git
+cd spotify-album-art-display
 
-2. Install the RGB Matrix Library
+2. Install Python Dependencies
 
-The installation of the RGB matrix library is a bit more complex because it's not a Python package that you can simply install with pip. Follow these steps:
-a. Install the library
+bash
 
-Clone the library's source code from GitHub, build, and install it. Run the following commands in your terminal:
+pip install -r requirements.txt
+
+3. Install the RGB Matrix Library
 
 bash
 
@@ -70,50 +83,41 @@ cd ~
 git clone https://github.com/hzeller/rpi-rgb-led-matrix.git
 cd rpi-rgb-led-matrix
 make
-
-b. Build the Python bindings
-
-Still, in the same directory, build the Python bindings:
-
-bash
-
 cd bindings/python
 make build-python
 sudo make install-python
 
-c. Test the installation
+4. Permissions
 
-You can test whether the installation was successful by running one of the included examples:
-
-bash
-
-cd examples-api-use
-sudo ./runtext.py
-
-Replace ./runtext.py with the path to any other example if you want to try something different.
-3. Permissions
-
-To run the script without needing root permissions, you should also add a udev rule to allow the current user to access the devices connected to the GPIO pins:
+To run the script without needing root permissions:
 
 bash
 
 cd ~/rpi-rgb-led-matrix/utils
 sudo ./install-service.sh
 
-4. Restart your Raspberry Pi
-
-Finally, restart your Raspberry Pi to ensure that all changes take effect:
+5. Restart the Raspberry Pi
 
 bash
 
 sudo reboot
 
-5. Run your Python script
+Usage
+Set Spotify Credentials
 
-Now you should be able to run your Python script without any issues:
+Open SpotifyAlbumArt.py and set your Spotify client_id, client_secret, and redirect_url.
+Run the Script
 
 bash
 
-python3 your-script.py
+python3 SpotifyAlbumArt.py
 
-Replace "your-script.py" with the name of your Python script.
+Customization
+
+You can adjust the size of the LED matrix and other parameters within the SpotifyAlbumArt.py file to fit your specific hardware setup.
+Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+License
+
+MIT
