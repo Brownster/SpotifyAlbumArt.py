@@ -1,6 +1,8 @@
 Spotify Now Playing Album Art Display
 
-This Python script displays the current playing album art from Spotify on a 4:3 monitor connected to a Raspberry Pi. It uses the Spotify API to fetch the currently playing track and retrieves the album art associated with it. If no track is currently playing, it will display a random album art from the previously played tracks. I used cloudflared tunnel to forward my subdomain that i used to create the spotify app to the raspberry pi, then use local redirect uri.
+This Python script displays the current playing album art from Spotify on a 4:3 monitor (or led matrix see below) connected to a Raspberry Pi. It uses the Spotify API to fetch the currently playing track and retrieves the album art associated with it. If no track is currently playing, it will display a random album art from the previously played tracks. I used cloudflared tunnel to forward my subdomain that i used to create the spotify app to the raspberry pi, then use local redirect uri.
+
+rename the script you want to use to SpotifyAlbumArt.py
 
 Prerequisites
 
