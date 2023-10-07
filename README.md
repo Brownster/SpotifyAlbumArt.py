@@ -66,8 +66,8 @@ Installation
 
 bash
 
-git clone [https://github.com/yourusername/https://github.com/Brownster/SpotifyAlbumArt.py/spotify-album-art-display.git
-cd spotify-album-art-display
+git clone git clone https://github.com/Brownster/SpotifyAlbumArt.py.git
+cd SpotifyAlbumArt
 
 2. Install Python Dependencies
 
