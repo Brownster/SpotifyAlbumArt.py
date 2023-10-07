@@ -5,11 +5,17 @@ This Python script displays the current playing album art from Spotify on a 4:3 
 rename the script you want to use to SpotifyAlbumArt.py
 
 there is a script which you can use to make install easier just;  
+
 vi install.sh
+
 i
+
 copy script over from https://github.com/Brownster/SpotifyAlbumArt.py/blob/main/install.sh
+
 :wq
+
 chmod +x install.sh
+
 ./install.sh
 
 HDMI Spotify Album Art
